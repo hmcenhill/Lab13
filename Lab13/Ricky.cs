@@ -10,7 +10,7 @@ namespace Lab13
         {
         }
 
-        public override Roshambo GenerateRoshambo()
+        public override Roshambo GenerateRoshambo(Roshambo playerThrow, Roshambo playerLastThrow)
         {
             Random rand = new Random();
             return (Roshambo)rand.Next(0, 3);

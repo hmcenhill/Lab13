@@ -14,15 +14,8 @@ namespace Lab13
             Name = name;
         }
 
-        public abstract Roshambo GenerateRoshambo();
+        public abstract Roshambo GenerateRoshambo(Roshambo playerThrow, Roshambo playerLastThrow);
         public abstract string Taunt();
     }
 }
 
-
-
-// Players:
-// The Rock
-// Ricky Random
-// Chester Cheater
-// Tricky Terrance

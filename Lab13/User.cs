@@ -10,7 +10,7 @@ namespace Lab13
         {
         }
 
-        public override Roshambo GenerateRoshambo()
+        public override Roshambo GenerateRoshambo(Roshambo playerThrow, Roshambo playerLastThrow)
         {
             Console.Write($"1 - Rock, 2 - Paper, 3 - Scissors:  ");
             int input = Validator.GetInt(1, 3);

@@ -24,8 +24,9 @@ namespace Lab13
         }
         private static void PlayRound(Score score, User user, Player opponent)
         {
-            user.Throw = user.GenerateRoshambo();
-            opponent.Throw = opponent.GenerateRoshambo();
+            user.Throw = user.GenerateRoshambo(Roshambo.Rock, score.Lastplay);
+            opponent.Throw = opponent.GenerateRoshambo(user.Throw, score.Lastplay);
+            score.Lastplay = user.Throw;
             Console.WriteLine($"\nYou played {user.Throw} and {opponent.Name} played {opponent.Throw}");
             if (user.Throw == opponent.Throw)
             {
@@ -74,6 +75,10 @@ namespace Lab13
                     return new TheRock();
                 case 2:
                     return new Ricky();
+                case 3:
+                    return new Chester();
+                case 4:
+                    return new Terrance();
                 default:
                     return new TheRock();
             }

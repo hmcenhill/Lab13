@@ -4,20 +4,22 @@ using System.Text;
 
 namespace Lab13
 {
-    public class TheRock : Player
+    public class Chester : Player
     {
-        public TheRock() : base("The Rock")
+        public Chester() : base("Chester Cheater")
         {
         }
 
         public override Roshambo GenerateRoshambo(Roshambo playerThrow, Roshambo playerLastThrow)
         {
+            if (playerThrow == Roshambo.Rock) return Roshambo.Paper;
+            if (playerThrow == Roshambo.Paper) return Roshambo.Scissors;
             return Roshambo.Rock;
         }
 
         public override string Taunt()
         {
-            return "Do you smell what The Rock is cooking?";
+            return "You can never win!";
         }
     }
 }
